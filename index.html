@@ -11,14 +11,41 @@
 
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <input type="text" id="new-task-description" name="new-task-description" placeholder="description" class="taskInput">
+      <label for="new-priority">Priority:</label>
+      <select id="select">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+      </select>
+      <label for="new-user">User:</label>
+      <input type="text" id="new-user" name="new-user" placeholder="user" class="taskInput">
+      <label for="new-duration">Duration:</label>
+      <input type="text" id="new-duration" name="new-duration" placeholder="duration" class="taskInput">
+      <label for="new-date-due">Date Due:</label>
+      <input type="date" id="new-date-due" name="new-date-due" placeholder="date" class="taskInput">
       <input type="submit" value="Create New Task">
     </form>
 
     <div id="list">
       <h2>My Todos:</h2>
+      <table id="tableList">
+        <tr>
+          <th>X</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>User</th>
+          <th>Duration</th>
+          <th>Due Date</th>
+        </tr>
+
+      </table>
       <ul id="tasks">
       </ul>
+    </div>
+
+    <div>
+
     </div>
 
     <script src="./src/index.js"></script>
